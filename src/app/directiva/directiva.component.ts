@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DirectivaComponent  {
 
-  listaCurso: string[] = ['TypeScript', 'JavaScript', 'Java SE','C#', 'PHP'];
+  listaEmpleados: string[] = ['Sandra Mejía - Administradora', 'Miguel Naranjo  - Gerente', 'Alexis Herrera - Usuario'];
 
   habilitar: boolean = true;
   constructor() { }
