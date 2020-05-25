@@ -41,15 +41,20 @@
             </div>
           </div>
           <div class="row">
-            <table class="table table-bordered table-striped my-4">
+
+            <div class="alert alert-info my-4" *ngIf="cliente.facturas.length==0">
+              No hay facturas asignadas para el cliente {{cliente.nombre}} {{cliente.apellido}}
+            </div>
+
+            <table class="table table-bordered table-striped my-4" *ngIf="cliente.facturas.length>0">
               <thead>
                 <th>Folio</th>
-                <th>descripción</th>
+                <th>Descripción</th>
                 <th>Fecha</th>
                 <th>Total</th>
               </thead>
               <tbody>
-                <tr *ngIf="let factura of cliente.facturas">
+                <tr *ngFor="let factura of cliente.facturas">
                   <td>{{factura.id}}</td>
                   <td>{{factura.descripcion}}</td>
                   <td>{{factura.createAt}}</td>
