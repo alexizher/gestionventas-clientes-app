@@ -28,7 +28,7 @@ export class ClientesComponent implements OnInit {
 
   ngOnInit() {
 
-    //activatedRoute.paramMap se encarga de suscribir un observador cada que cambia el parametro page en la ruta haciendo clic entre las páginas, manteniendo siempre la misma instacia a través de todo el paginador
+    // activatedRoute.paramMap se encarga de suscribir un observador cada que cambia el parametro page en la ruta haciendo clic entre las páginas, manteniendo siempre la misma instacia a través de todo el paginador
     this.activatedRoute.paramMap.subscribe(params => {
       let page: number = +params.get('page');
 
@@ -90,7 +90,7 @@ export class ClientesComponent implements OnInit {
         )
 
       }
-    })
+    });
   }
 
   abrirModal(cliente: Cliente){
