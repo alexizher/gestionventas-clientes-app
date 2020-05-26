@@ -12,13 +12,15 @@ import { ActivatedRoute } from '@angular/router';
 export class DetalleFacturaComponent implements OnInit {
 
   factura: Factura;
+  // tslint:disable-next-line: no-inferrable-types
   titulo: string = 'Factura';
 
   constructor(private facturaService: FacturaService,
-    private activatedRoute: ActivatedRoute) { }
+              private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.activatedRoute.paramMap.subscribe(params => {
+      // tslint:disable-next-line: prefer-const
       let id = +params.get('id');
       this.facturaService.getFactura(id).subscribe(factura => this.factura = factura);
     });
