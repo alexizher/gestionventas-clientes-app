@@ -19,7 +19,7 @@ export class FacturaService {
   }
 
   delete(id: number): Observable<void>{
-    return this.delete<void>(`${this.urlEndPoint}/${id}`);
+    return this.http.delete<void>(`${this.urlEndPoint}/${id}`);
   }
 
 }

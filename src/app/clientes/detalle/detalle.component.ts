@@ -16,7 +16,7 @@ import { Factura } from '../../facturas/models/factura';
 })
 export class DetalleComponent implements OnInit {
   @Input() cliente: Cliente;
-  titulo: string = "Detalle del Cliente";
+  titulo: string = 'Detalle del Cliente';
   fotoSeleccionada: File;
   progreso: number = 0;
 
@@ -79,7 +79,7 @@ export class DetalleComponent implements OnInit {
       if (result.value) {
 
         this.facturaService.delete(factura.id).subscribe(
-          () => {
+          (response) => {
             this.cliente.facturas = this.cliente.facturas.filter(f => f !== factura)
             swal.fire(
               'Factura Eliminada!',
