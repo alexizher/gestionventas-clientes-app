@@ -18,7 +18,7 @@ export class DetalleFacturaComponent implements OnInit {
   constructor(private facturaService: FacturaService,
               private activatedRoute: ActivatedRoute) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.activatedRoute.paramMap.subscribe(params => {
       // tslint:disable-next-line: prefer-const
       let id = +params.get('id');

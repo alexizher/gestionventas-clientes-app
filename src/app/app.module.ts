@@ -12,6 +12,7 @@ import { ClienteService } from './clientes/cliente.service';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { registerLocaleData } from '@angular/common';
 import localeES from '@angular/common/locales/es-CO';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
