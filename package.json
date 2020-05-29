@@ -23,6 +23,7 @@
     "@angular/platform-browser-dynamic": "^9.1.4",
     "@angular/router": "^9.1.4",
     "bootstrap": "^4.4.1",
+    "bootstrap-icons": "^1.0.0-alpha4",
     "bootswatch": "^4.4.1",
     "jquery": "^3.5.1",
     "moment": "^2.25.3",

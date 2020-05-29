@@ -3,7 +3,7 @@
     {{ err }}
   </li>
 </ul>
-<div class="card bg-dark text-white">
+<div class="card bg-dark text-white mt-n5">
   <div class="card-header">{{titulo}}</div>
   <div class="card-body">
 
@@ -54,8 +54,8 @@
         <label for="createAt" class="col-form-label col-sm-2">Fecha</label>
         <div class="col-sm-6">
           <!--<input type="date" class="form-control" [(ngModel)]="cliente.createAt" name="createAt"> required -->
-          <input [matDatepicker]="miDatepicker" class="form-control" [(ngModel)]="cliente.createAt" name="createAt" style="display:inline; width:300px;">
-          <mat-datepicker-toggle [for]="miDatepicker"></mat-datepicker-toggle>
+          <input [matDatepicker]="miDatepicker" class="form-control col-sm-6 " [(ngModel)]="cliente.createAt" name="createAt" style="display:inline; ">
+          <mat-datepicker-toggle [for]="miDatepicker" class="text-white"></mat-datepicker-toggle>
           <mat-datepicker #miDatepicker></mat-datepicker>
         </div>
       </div>
@@ -63,8 +63,8 @@
       <div class="form-group row">
         <label for="region" class="col-form-label col-sm-2">Región</label>
         <div class="col-sm-6">
-          <select [compareWith]="compararRegion" class="form-control" [(ngModel)]="cliente.region" name="region" style="width:500px;">
-            <option [ngValue]="undefined">--- Seleccionar una Región ---</option>
+          <select [compareWith]="compararRegion" class="form-control col-sm-auto" [(ngModel)]="cliente.region" name="region" >
+            <option [ngValue]="undefined"> Seleccionar una Región </option>
             <option *ngFor="let region of regiones" [ngValue]="region">{{region.nombre}}</option>
           </select>
         </div>
