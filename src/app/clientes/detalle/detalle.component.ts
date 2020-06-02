@@ -5,6 +5,7 @@ import {ModalService} from './modal.service';
 import swal from "sweetalert2";
 import { HttpEventType } from '@angular/common/http';
 import { AuthService } from '../../usuarios/auth.service';
+import { URL_BACKEND } from '../config/config';
 
 @Component({
   selector: 'detalle-cliente',
@@ -16,6 +17,7 @@ export class DetalleComponent implements OnInit {
   titulo: string = "Detalle del Cliente";
   fotoSeleccionada: File;
   progreso: number = 0;
+  urlBackend: string = URL_BACKEND;
 
 
   constructor(private clienteService: ClienteService,
